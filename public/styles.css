@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-image: url('/background.png'); /* Placeholder for tiger background */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Login Container */
+.login-container, .game-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.login-container h2, .game-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #e94560;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #e5e5e5;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(233, 69, 96, 0.5);
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #e94560;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d4355b;
+}
+
+/* Game Interface */
+.game-container p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #e5e5e5;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.choices button {
+    width: auto;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #ffffff;
+    border: 1px solid #e94560;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.choices button:hover {
+    background-color: #f1f1f1;
+    border-color: #d4355b;
+}
+
+/* Additional Styling for Visibility */
+#otp-section {
+    display: block !important;
+}
+
+
+#otp-section input[type="text"] {
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .login-container, .game-container {
+        width: 90%;
+    }
+
+    .game-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .game-container p {
+        font-size: 1rem;
+    }
+}

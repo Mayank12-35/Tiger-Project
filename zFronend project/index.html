@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger Story Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="navbar-links">
+            <a href="#" onclick="reloadPage()">HOME</a>
+            <a href="#" onclick="openSidebar('about')">ABOUT</a>
+            <a href="#" onclick="openSidebar('contact')">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar for About and Contact content -->
+    <div id="sidebar" class="sidebar">
+        <div id="sidebar-content" class="sidebar-content">
+            <!-- Content will be dynamically updated here -->
+        </div>
+        <button onclick="closeSidebar()" class="close-sidebar">&times;</button>
+    </div>
+
+    <!-- Main game container -->
+    <div class="game-container" id="game-container" style="display: none;">
+        <header>
+            <h1>Welcome to the Tiger Game</h1>
+            <p id="game-question">Click the "Game" button to start!</p>
+        </header>
+
+        <!-- Choices will be dynamically generated here -->
+        <div class="choices" id="choices"></div>
+
+        <!-- Restart button, initially hidden -->
+        <button id="restart-button" onclick="restartGame()" style="display: none;">Restart</button>
+    </div>
+
+    <!-- Centered GAME button -->
+    <div class="game-start" id="game-start">
+        <a href="#" onclick="startGame()">GAME</a>
+    </div>
+
+    <!-- Button to open the sidebar -->
+<button id="sidebar-toggle" onclick="openSidebar('about')">Open About</button>
+
+<!-- Sidebar container -->
+<div id="sidebar">
+    <div id="sidebar-content">
+        <!-- Dynamic content will be injected here -->
+    </div>
+    <!-- Close button to hide the sidebar -->
+    <button id="close-btn" onclick="closeSidebar()">X</button>
+</div>
+
+
+
+
+    <div id="responses"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
